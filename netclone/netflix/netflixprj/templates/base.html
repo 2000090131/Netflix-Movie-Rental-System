@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIET</title>
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000000;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #000000;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #000000;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #000000;
+    color:black;
+
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="http://127.0.0.1:8000/watch/107476fa-082b-4352-92e7-f3547927b3b5/#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</head>
+<body class="bg-black text-gray-100">
+    <nav class="flex justify-between items-center py-3 px-4 fixed w-full z-50">
+        <div class="w-6/12">
+            <img src="{% static 'assets/newlogo.png' %}" alt="logo" class="w-5/12 md:w-2/12">
+        </div>
+
+        <div>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'account_logout' %}" class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
+                Logout
+            </a>
+            {% else %}
+            <a href="{% url 'account_login' %}" class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
+                Sign In
+            </a>
+            {% endif %}
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock content %}
+    <!-- <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+
+            <li>&copy; All Right Reserved | 2022</li>
+
+        </ul>
+    </footer> -->
+</body>
+</html>

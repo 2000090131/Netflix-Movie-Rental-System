@@ -1,0 +1,368 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+        <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/Hero-Yash-KGF-Chapter-2-First-Look-Poster-HD-1068x711.jpg' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    KGF 2 Coming Soon.
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                  The blood-soaked land of Kolar Gold Fields has a new overlord now, Rocky, whose name strikes fear in the heart of his foes. His allies look up to him as their Savior, the government sees him as a threat, and his enemies are clamouring for revenge.
+                </p>
+                <div class="flex my-4">
+
+                   <a href="https://www.youtube.com/embed/Qah9sSIXJqk" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+     <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/tv-55.png' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    Spy × Family
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                Spy × Family is a Japanese manga series written and illustrated by Tatsuya Endo. The story follows a spy who has to "build a family" to execute a mission, not realizing that the girl he adopts as a daughter and the woman he agrees to be in a marriage with are a mind reader and an assassin, respectively.
+                </p>
+                <div class="flex my-4">
+
+                   <a href="http://www.youtube.com/embed/zX54DIpacNE" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+   <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/tv-22.jpg' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    No Way Home
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+              Peter Parker seeks Doctor Strange's help to make people forget about Spiderman's identity. However, when the spell he casts gets corrupted, several unwanted guests enter their universe.Spider-Man: No Way Home is a 2021 American superhero film based on the Marvel Comics character Spider-Man, co-produced by Columbia Pictures and Marvel Studios and distributed by Sony Pictures Releasing. It is the sequel to Spider-Man: Homecoming (2017) and Spider-Man: Far From Home (2019), and the 27th film in the Marvel Cinematic Universe (MCU).
+                </p>
+                <div class="flex my-4">
+
+                   <a href="http://www.youtube.com/embed/zX54DIpacNE" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+   <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/stv-3.jpg' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    Kung Fu Panda
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                 When Po the Panda, a kung fu enthusiast, gets selected as the Dragon Warrior, he decides to team up with the Furious Five and destroy the evil forces that threaten the Valley of Peace.
+                    Dragon Warrior Po takes it upon himself to foil the plans of murderous peacock Shen who intends to conquer China and destroy kung fu. For this, Po has to unveil the mystery of his own past.
+                </p>
+                <div class="flex my-4">
+
+                   <a href="http://www.youtube.com/embed/zX54DIpacNE" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+  <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/stv-4.jpg' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    Black Panther
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                  After his father's death, T'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.
+                </p>
+                <div class="flex my-4">
+
+                   <a href="http://www.youtube.com/embed/zX54DIpacNE" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+     <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'assets/stv-5.jpg' %}');">
+        <div>
+                <h2 class="text-6xl font-semibold text-white my-4">
+                    The Batman
+                </h2>
+                <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
+                  Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the evidence begins to lead closer to home and the scale of the perpetrator's plans become clear, he must forge new relationships, unmask the culprit and bring justice to the abuse of power and corruption that has long plagued the metropolis.
+                </p>
+                <div class="flex my-4">
+
+                   <a href="http://www.youtube.com/embed/zX54DIpacNE" target=_blank" class='bg-primary_red bg-opacity-30 py-1 px-3 text-white md:text-lg rounded-md'>
+                Trailer
+
+            </a>
+
+                    <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
+
+                        <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
+                        <span class="ml-3 font-medium">
+                            More Info
+                        </span>
+                    </button>
+                </div>
+            </div>
+            </section>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+
+        <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
+            <div class="p-8 w-10/12 relative" >
+                <h2 class="text-gray-200 text-2xl font-medium">
+                    Popular on MOVIET
+                </h2>
+                <div class="flex justify-center  items-center min-w-full  movie_lis">
+                    {% for movie in movies %}
+                    <a href="{% url 'netflixapp:movie-detail' movie_id=movie.uuid %}">
+                        <div class=" h-50 m-4  bg-blue-500 flex-shrink-0 rounded-md cursor-pointer w-40">
+                            <img src="{{movie.image.url}}" class="w-full h-full " alt="">
+                        </div>
+                    </a>
+                    {% endfor %}
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    {% endblock content %}
